@@ -1,0 +1,3 @@
+﻿Ticket ID,Timestamp,Staff Name,Room No,Device Type,Fault Description,Repair Action Taken,IT Response,Status
+TICK-101,2026-10-27 14:58:12,احمد اسماعيل,Room b006,PC / Workstation,الجهاز لا يعمل ويعطى اشاشه صفراء,تم تغير الهار وتنزيل نسخه,تم تغير ف تاريخه ,Resolved 🟢
+TICK-102,2026-10-27 20:24:21,محمود سمير ,Room 103,PC / Workstation,الجهاز لم يصله باور ولا يفتح,تم فحص الجهاز وتغير رامات وبطاريه ونسخه,الجهاز تمام لا يوجد مشاكل,Resolved 🟢

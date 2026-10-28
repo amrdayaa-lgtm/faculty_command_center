@@ -1,0 +1,4 @@
+﻿Log ID,Timestamp,Bus No / Route,Driver Name,Departure Time,Arrival Time,Delay Status,Notes
+BUS-101,2026-10-27 20:46:04,ج ل م 5547 خط قناه سويس ,ابراهيم,08:45,08:40,On Time / ملتزم بالميعاد 🟢,
+AUTO-BUS-102,2026-10-27 20:56:53,Bus Line #04 - Mansoura Express,كابتن إبراهيم متولي,08:00,20:56,Auto-Detected: Minor Delay (5m) ⚠️,تم الرصد أوتوماتيكياً عبر حساسات بوابة الكلية بدون تدخل بشري.
+AUTO-BUS-103,2026-10-27 20:56:56,Bus Line #04 - Mansoura Express,كابتن إبراهيم متولي,08:00,20:56,Auto-Detected: Minor Delay (5m) ⚠️,تم الرصد أوتوماتيكياً عبر حساسات بوابة الكلية بدون تدخل بشري.
