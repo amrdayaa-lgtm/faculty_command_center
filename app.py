@@ -28,7 +28,7 @@ MAX_ALLOWED_DISTANCE_METERS = 100.0
 LOGO_PATH = "logof.png"
 GLOBAL_SYSTEM_PASS = os.environ.get("MNU_GLOBAL_PASS", "2026")  # كلمة سر الواجهة العامة من بره
 ADMIN_PASS = os.environ.get("MNU_ADMIN_PASS", "7442")          # كلمة سر داشبورد القيادة المركزية
-BASE_URL = os.environ.get("MNU_BASE_URL", "https://mnu-eng-command.streamlit.app")
+BASE_URL = os.environ.get("MNU_BASE_URL", "https:// facultycommandcenter-encnpb25pazrarrahevb8g.streamlit.app ")
 
 
 def generate_qr_bytes(url):
@@ -531,7 +531,7 @@ render_footer(lang)
 import streamlit as st
 
 # رابط التطبيق اللايف الخاص بك على ستريم ليت مع باراميتر الفورم
-app_url = "https://diginet-cr4eumdedeasnjt3zrkd7.streamlit.app/?page=form"
+app_url = "https:// facultycommandcenter-encnpb25pazrarrahevb8g.streamlit.app /?page=form"
 # استقبال الباراميتر لتوجيه المستخدم مباشرة للفورم
 query_params = st.query_params
 is_form_page = query_params.get("page") == "form"
