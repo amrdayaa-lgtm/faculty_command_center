@@ -545,5 +545,4 @@ if is_form_page:
     if st.button("إرسال تقرير سير العمل"):
         st.success("تم إرسال التقرير بنجاح وتسجيل الموقع والجهاز!")
 else:
-  
     st.write(f"رابط البوابة: {BASE_URL}/?portal=staff")
