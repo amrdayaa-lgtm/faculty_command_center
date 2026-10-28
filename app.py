@@ -176,11 +176,8 @@ st.sidebar.info("⚡ **SECURITY ACTIVE:** Global Pass, Perimeter & Token Shields
 # ================= Header =================
 if portal_mode:
     n = NAMES[lang]
-    st.markdown(
-        f'<div class="cut"><div class="cut-in lead dean" dir="{n["dir"]}"><div class="role">{n["uni"]}</div>'
-        f'<div class="nm" style="font-size:24px">{n["fac"]}</div></div></div><br>',
-        unsafe_allow_html=True,
-    )
+    
+     
 else:
     try:
         render_hero(LOGO_PATH, lang=lang)
@@ -550,7 +547,5 @@ if is_form_page:
 else:
     # --- الواجهة الرئيسية التي تعرض تفاصيل سير العمل والرابط المباشر ---
     st.markdown("### Workforce Ops - سير العمل")
-    st.write("امسح الـ QR Code بالموبايل أو اضغط على الرابط التالي لفتح الفورم مباشرة:")
     
-    # عرض رابط مباشر احتياطي لسهولة الوصول من الموبايل
-    st.markdown(f"🔗 [اضغط هنا لفتح الفورم مباشرة بالموبايل]({app_url})")
+    st.markdown()
