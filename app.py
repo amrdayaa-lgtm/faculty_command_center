@@ -545,7 +545,5 @@ if is_form_page:
     if st.button("إرسال تقرير سير العمل"):
         st.success("تم إرسال التقرير بنجاح وتسجيل الموقع والجهاز!")
 else:
-    # --- الواجهة الرئيسية التي تعرض تفاصيل سير العمل والرابط المباشر ---
-    st.markdown("### Workforce Ops - سير العمل")
-    
-    st.markdown()
+  
+    st.write(f"رابط البوابة: {BASE_URL}/?portal=staff")
