@@ -531,7 +531,7 @@ render_footer(lang)
 import streamlit as st
 
 # رابط التطبيق اللايف الخاص بك على ستريم ليت مع باراميتر الفورم
-app_url = "https:// facultycommandcenter-encnpb25pazrarrahevb8g.streamlit.app /?page=form"
+app_url = st.markdown(f"[{BASE_URL}/?portal=staff]({BASE_URL}/?portal=staff)")
 # استقبال الباراميتر لتوجيه المستخدم مباشرة للفورم
 query_params = st.query_params
 is_form_page = query_params.get("page") == "form"
