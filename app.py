@@ -282,12 +282,28 @@ elif navigation == curr['m_qr_hub']:
         ("🚌 Bus Fleet | حوكمة الباصات", "bus", GOLD),
     ]
     
+# ================= 2. REAL QR HUB (With Real PNG Downloads) =================
+elif navigation == curr['m_qr_hub']:
+    st.subheader("📱 External QR Codes Hub (7 Printable Portals)")
+    st.info("قم بتحميل صور الـ QR الحقيقية وتعليقها في الأماكن المخصصة لكل قطاع. كل رمز موجه خصيصاً لفتح فورمته التكتيكية بمعزل تام عن الداشبورد المركزية.")
+    
+    portals = [
+        ("💼 Staff Maintenance | صيانة الموظفين", "staff", CYAN),
+        ("👨‍🎓 Student Attendance | حضور الطلاب", "student", GOLD),
+        ("👨‍🏫 Workforce Ops | سير العمل", "ta", GREEN),
+        ("🛠️ Hall Inspection | فحص القاعات", "tech", VIOLET),
+        ("💡 Governance | الحوكمة", "gov", RED),
+        ("🚗 Staff Vehicles | بوابة السيارات", "vehicle", CYAN),
+        ("🚌 Bus Fleet | حوكمة الباصات", "bus", GOLD),
+    ]
+    
     cols = st.columns(3)
+    BASE_URL = "https://facultycommandcenter-encnpb25pazrarrahevb8g.streamlit.app"
     for i, (title, key, color) in enumerate(portals):
         with cols[i % 3]:
             target_url = f"{BASE_URL}/?portal={key}"
             qr_bytes = generate_qr_bytes(target_url)
-            
+
             st.markdown(f"### {title}")
             st.image(qr_bytes, width=200)
             st.download_button(
@@ -299,11 +315,10 @@ elif navigation == curr['m_qr_hub']:
             )
             st.markdown("---")
 
-# ================= 3. STAFF & TRACKING PORTAL =================
+# ===================== 3. STAFF & TRACKING PORTAL =====================
 elif navigation == curr['m_staff_portal']:
-    st.subheader("💼 Staff IT Support & Maintenance Portal / بوابة صيانة ومتابعة الموظفين")
-    tab_s1, tab_s2 = st.tabs(["تقديم طلب صيانة جديد", "متابعة حالة التذكرة ورد الـ IT"])
-    
+    st.subheader("🛠️ Staff IT Support & Maintenance Portal / بوابة صيانة ومتابعة الموظفين")
+    tab_s1, tab_s2 = st.tabs(["تقديم طلب صيانة جديد", "IT متابعة حالة التذكرة ورد الـ"])   
     with tab_s1:
         with st.form("staff_ticket_form"):
             c1, c2 = st.columns(2)
@@ -346,8 +361,7 @@ elif navigation == curr['m_staff_portal']:
         else:
             st.info("لا توجد تذاكر مسجلة.")
 
-# ================= 4. STUDENTS (GPS LOCKED) =================
-elif navigation == curr['m_student_portal']:
+# ================= 4. STUDENTS (GPS LOCKED) =================elif navigation == curr['m_student_portal']:
     st.subheader("👨‍🎓 Student Attendance Portal / حضور الطلاب (مؤمن بالـ GPS)")
     with st.form("student_portal_form"):
         c1, c2 = st.columns(2)
@@ -369,8 +383,7 @@ elif navigation == curr['m_student_portal']:
             else:
                 st.warning("⚠️ يرجى استكمال البيانات.")
 
-# ================= 5. WORKFORCE & HALL OPERATIONS =================
-elif navigation == curr['m_ta_portal']:
+# ================= 5. WORKFORCE & HALL OPERATIONS =================elif navigation == curr['m_ta_portal']:
     st.subheader("👨‍🏫 Workforce & Hall Operations / متابعة أشغال القاعات وسير العمل (GPS + وقت تلقائي)")
     periods = {
         "Period 1 (09:00 AM - 10:30 AM)": (9, 0), 
@@ -411,8 +424,7 @@ elif navigation == curr['m_ta_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال البيانات المطلوبة.")
 
-# ================= 6. TECHNICIANS =================
-elif navigation == curr['m_tech_portal']:
+# ================= 6. TECHNICIANS =================elif navigation == curr['m_tech_portal']:
     st.subheader("🛠️ بوابة الفنيين وفحص القاعات المفصل")
     with st.form("tech_detailed_form"):
         tech_name = st.text_input("اسم الفني المسؤول")
@@ -438,8 +450,7 @@ elif navigation == curr['m_tech_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال اسم الفني ورقم القاعة.")
 
-# ================= 7. GOVERNANCE =================
-elif navigation == curr['m_gov_portal']:
+# ================= 7. GOVERNANCE =================elif navigation == curr['m_gov_portal']:
     st.subheader("💡 بوابة الحوكمة والمقترحات والشكاوى التطويرية")
     with st.form("gov_proposal_form"):
         c1, c2 = st.columns(2)
@@ -468,8 +479,7 @@ elif navigation == curr['m_gov_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال البيانات.")
 
-# ================= 8. STAFF VEHICLES SECURE GATE =================
-elif navigation == curr['m_vehicle_portal']:
+# ================= 8. STAFF VEHICLES SECURE GATE =================elif navigation == curr['m_vehicle_portal']:
     st.subheader("🚗 Staff Vehicles Secure Gate / بوابة تصاريح سيارات الموظفين المؤمنة")
     st.info("🔒 نظام أمني مشدد: التصاريح رقمية وعبر بوابات الأمن بالكلية (يتم مسح الكود من شاشة موظف الأمن بالكلية).")
     
@@ -493,8 +503,7 @@ elif navigation == curr['m_vehicle_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال اسم الموظف ورقم لوحة السيارة.")
 
-# ================= 9. AUTO BUS FLEET TRACKING =================
-elif navigation == curr['m_bus_portal']:
+# ================= 9. AUTO BUS FLEET TRACKING =================elif navigation == curr['m_bus_portal']:
     st.subheader("🚌 Automated Bus Fleet Tracking / التتبع الآلي الذكي لحافلات النقل")
     st.info("📍 نظام أوتوماتيكي بالكامل: السيستم يقوم بتسجيل وصول الباصات عند بوابات الكلية عبر المجسات الجغرافية دون أي تدخل يدوي.")
     
