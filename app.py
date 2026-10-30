@@ -361,7 +361,8 @@ elif navigation == curr['m_staff_portal']:
         else:
             st.info("لا توجد تذاكر مسجلة.")
 
-# ================= 4. STUDENTS (GPS LOCKED) =================elif navigation == curr['m_student_portal']:
+# ================= 4. STUDENTS (GPS LOCKED) =================
+elif navigation == curr['m_student_portal']:
     st.subheader("👨‍🎓 Student Attendance Portal / حضور الطلاب (مؤمن بالـ GPS)")
     with st.form("student_portal_form"):
         c1, c2 = st.columns(2)
@@ -383,7 +384,8 @@ elif navigation == curr['m_staff_portal']:
             else:
                 st.warning("⚠️ يرجى استكمال البيانات.")
 
-# ================= 5. WORKFORCE & HALL OPERATIONS =================elif navigation == curr['m_ta_portal']:
+# ================= 5. WORKFORCE & HALL OPERATIONS =================
+elif navigation == curr['m_ta_portal']:
     st.subheader("👨‍🏫 Workforce & Hall Operations / متابعة أشغال القاعات وسير العمل (GPS + وقت تلقائي)")
     periods = {
         "Period 1 (09:00 AM - 10:30 AM)": (9, 0), 
@@ -424,7 +426,8 @@ elif navigation == curr['m_staff_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال البيانات المطلوبة.")
 
-# ================= 6. TECHNICIANS =================elif navigation == curr['m_tech_portal']:
+# ================= 6. TECHNICIANS =================
+elif navigation == curr['m_tech_portal']:
     st.subheader("🛠️ بوابة الفنيين وفحص القاعات المفصل")
     with st.form("tech_detailed_form"):
         tech_name = st.text_input("اسم الفني المسؤول")
@@ -450,7 +453,8 @@ elif navigation == curr['m_staff_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال اسم الفني ورقم القاعة.")
 
-# ================= 7. GOVERNANCE =================elif navigation == curr['m_gov_portal']:
+# ================= 7. GOVERNANCE =================
+elif navigation == curr['m_gov_portal']:
     st.subheader("💡 بوابة الحوكمة والمقترحات والشكاوى التطويرية")
     with st.form("gov_proposal_form"):
         c1, c2 = st.columns(2)
@@ -479,7 +483,8 @@ elif navigation == curr['m_staff_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال البيانات.")
 
-# ================= 8. STAFF VEHICLES SECURE GATE =================elif navigation == curr['m_vehicle_portal']:
+# ================= 8. STAFF VEHICLES SECURE GATE =================
+elif navigation == curr['m_vehicle_portal']:
     st.subheader("🚗 Staff Vehicles Secure Gate / بوابة تصاريح سيارات الموظفين المؤمنة")
     st.info("🔒 نظام أمني مشدد: التصاريح رقمية وعبر بوابات الأمن بالكلية (يتم مسح الكود من شاشة موظف الأمن بالكلية).")
     
@@ -503,7 +508,8 @@ elif navigation == curr['m_staff_portal']:
             else:
                 st.warning("⚠️ يرجى إدخال اسم الموظف ورقم لوحة السيارة.")
 
-# ================= 9. AUTO BUS FLEET TRACKING =================elif navigation == curr['m_bus_portal']:
+# ================= 9. AUTO BUS FLEET TRACKING =================
+elif navigation == curr['m_bus_portal']:
     st.subheader("🚌 Automated Bus Fleet Tracking / التتبع الآلي الذكي لحافلات النقل")
     st.info("📍 نظام أوتوماتيكي بالكامل: السيستم يقوم بتسجيل وصول الباصات عند بوابات الكلية عبر المجسات الجغرافية دون أي تدخل يدوي.")
     
