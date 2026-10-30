@@ -267,20 +267,6 @@ if navigation == curr['m_dashboard']:
     else:
         st.info("ℹ️ Please enter the command password.")
 
-# ================= 2. REAL QR HUB (With Real PNG Downloads) =================
-elif navigation == curr['m_qr_hub']:
-    st.subheader("📱 External QR Codes Hub (7 Printable Portals)")
-    st.info("قم بتحميل صور الـ QR الحقيقية وتعليقها في الأماكن المخصصة لكل قطاع. كل رمز موجه خصيصاً لفتح فورمته التكتيكية بمعزل تام عن الداشبورد المركزية.")
-    
-    portals = [
-        ("💼 Staff Maintenance | صيانة الموظفين", "staff", CYAN),
-        ("👨‍🎓 Student Attendance | حضور الطلاب", "student", GOLD),
-        ("👨‍🏫 Workforce Ops | سير العمل", "ta", GREEN),
-        ("🛠️ Hall Inspection | فحص القاعات", "tech", VIOLET),
-        ("💡 Governance | الحوكمة", "gov", RED),
-        ("🚗 Staff Vehicles | بوابة السيارات", "vehicle", CYAN),
-        ("🚌 Bus Fleet | حوكمة الباصات", "bus", GOLD),
-    ]
     
 # ================= 2. REAL QR HUB (With Real PNG Downloads) =================
 elif navigation == curr['m_qr_hub']:
